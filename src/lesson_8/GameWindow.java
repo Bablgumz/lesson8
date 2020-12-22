@@ -24,6 +24,7 @@ public class GameWindow extends JFrame {
         JPanel panel = new JPanel(new GridLayout(1, 2));
         JButton btnStartNewGame = new JButton("StartNewGame");
         panel.add(btnStartNewGame);
+
         JButton btnExit = new JButton("Exit");
         panel.add(btnExit);
         add(panel, BorderLayout.SOUTH);
@@ -40,6 +41,6 @@ public class GameWindow extends JFrame {
     }
 
     public void startNewGame(int mode, int fieldSize, int winningLength){
-        System.out.printf("%d %d %d \n, mode, fieldSize, winningLength ");
+        battleMap.startNewGame(mode, fieldSize, winningLength);
     }
 }
